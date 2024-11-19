@@ -6,7 +6,7 @@ from io import StringIO
 import pandas as pd
 import numpy as np
 
-#funtion to create dataframe from raw json 
+#funtion to create netflix dataframe from raw json 
 def create_netflix_movie_df(netflix_movies_raw):
 
     #creating dataframe from netflix movie data
@@ -25,7 +25,8 @@ def create_netflix_movie_df(netflix_movies_raw):
         netflix_movie_data.append(temp)
     df = pd.DataFrame(netflix_movie_data)
     return df
-
+    
+#function to create imdb movie datframe
 def create_imdb_movie_df(imdb_movies_raw):
     
     #ombd movie data
@@ -48,7 +49,7 @@ def create_imdb_movie_df(imdb_movies_raw):
             more_movie_data.append(temp)
     df = pd.DataFrame(more_movie_data)
     return df
-    
+#funtion to process imdb columns    
 def change_to_float(df, column_list):
     char_to_replace = [',', '$','min']
     for column in column_list:
