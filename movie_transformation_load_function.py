@@ -49,6 +49,7 @@ def create_imdb_movie_df(imdb_movies_raw):
             more_movie_data.append(temp)
     df = pd.DataFrame(more_movie_data)
     return df
+    
 #funtion to process imdb columns    
 def change_to_float(df, column_list):
     char_to_replace = [',', '$','min']
@@ -63,7 +64,7 @@ def change_to_float(df, column_list):
 
 def lambda_handler(event, context):
     
-    #getting netflix and keys
+    #getting netflix data and keys
     s3=boto3.client('s3')
     Bucket = "netflix-etl-project-at"
     Key = "raw_data/to_process/netflix/"
@@ -127,7 +128,7 @@ def lambda_handler(event, context):
         imdb_contents = imdb_buffer.getvalue() #getting values in song buffer
         s3.put_object(Bucket = Bucket, Key = imdb_filename, Body = imdb_contents)
     
-    #moving netflix raw data to processed folder
+    #moving netflix raw data from to_process to processed folder
     s3_resource = boto3.resource('s3')
     for key in netflix_keys:
         copy_source = {
@@ -139,7 +140,7 @@ def lambda_handler(event, context):
         s3_resource.Object(Bucket, key).delete()
         
     
-    #moving imdb raw data to processed folder
+    #moving imdb raw data from to_process to processed folder
     s3_resource = boto3.resource('s3')
     for key in imdb_keys:
         copy_source = {
