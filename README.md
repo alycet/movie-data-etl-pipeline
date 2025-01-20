@@ -33,9 +33,9 @@ pip install pandas
 
 In the extract phase, a lambda function is triggered and executed to extract data and load into AWS S3 bucket. This lamdba funtion is deployed with a docker image.
 
-  *Using selenium, beautiful soup, and requests, the top 1000 movie titles are extracted from IMDB website. 
+  * Using selenium, beautiful soup, and requests, the top 1000 movie titles are extracted from IMDB website. 
   
-  *The titles are passed to the OMDB API to extract more information about each movie.
+  * The titles are passed to the OMDB API to extract more information about each movie.
 
 2.  **Transform**
 3.  **Load**
