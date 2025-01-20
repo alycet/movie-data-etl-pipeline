@@ -29,23 +29,23 @@ pip install pandas
 ```
 
 ### Project Execution Flow
-1. **Extract**
+1. ***Extract***
 
-In the extract phase, a lambda function is triggered and executed to extract data and load into AWS S3 bucket that holds data to be processed. This lamdba funtion is deployed with a docker image to package all dependencies and libraries.
+ In the extract phase, a lambda function is triggered and executed to extract data and load into AWS S3 bucket that holds data to be processed. This lamdba funtion is deployed with a docker image to package all dependencies and libraries.
 
   * Using selenium, beautiful soup, and requests, the top 1000 movie titles are extracted from IMDB website. 
   
   * The titles are passed to the OMDB API to extract more information about each movie.
 
-2.  **Transform**
+2.  ***Transform***
 
-In the transformation phase, a lambda function is triggered to clean data and transform to csv files.  These csv files are loaded to S3 buckets for processed and transformed data.
+ In the transformation phase, a lambda function is triggered to clean data and transform to csv files.  These csv files are loaded to S3 buckets for processed and transformed data.
 
  * Details
 
-3.  **Load**
+3.  ***Load***
 
-In the load phase, cleaned data is merged into Snowflake for querying.
+ In the load phase, cleaned data is merged into Snowflake for querying.
 
  * Details
 
