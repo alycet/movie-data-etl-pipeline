@@ -5,7 +5,8 @@ In this project, we will build an ETL (Extract, Transform, Load) pipeline using 
 
 ### Architecture
 
-### About the Data
+### About the Data/AP
+This API contains movie information from IMDB website including title, release_date, runtime, genre, plot, awards, actors, writers, directors, content_rating, box_office, imdb_rating, imdb_votes, and metascore.
 
 ### Services Used
 1.  **S3**: Description
@@ -25,7 +26,6 @@ pip install omdb
 pip installl numpy
 pip install pandas
 ```
-
 
 ### Project Execution Flow
 
