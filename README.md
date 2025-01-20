@@ -30,6 +30,7 @@ pip install pandas
 
 ### Project Execution Flow
 1. **Extract**
+
 Using selenium, beautiful soup, and requests, the top 1000 movie titles are extracted from IMDB website. The titles are passed to the OMDB API to extract more information about each movie.
 
 
