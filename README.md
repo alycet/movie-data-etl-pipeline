@@ -15,7 +15,17 @@ In this project, we will build an ETL (Extract, Transform, Load) pipeline using 
 5.  **Apache Airflow**: Description
 6.  **Docker**: Description
 
-### Packages and API's
+### Packages
+
+```
+pip install bs4
+pip install requests
+pip install selenium
+pip install omdb
+pip installl numpy
+pip install pandas
+```
+
 
 ### Project Execution Flow
 
