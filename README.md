@@ -8,7 +8,12 @@ In this project, we will build an ETL (Extract, Transform, Load) pipeline using 
 ### About the Data
 
 ### Services Used
-1.  **S3**
+1.  **S3**: Description
+2.  **AWS Lamdba**: Description
+3.  **AWS EC2**: Description
+4.  **Snowflake**: Description
+5.  **Apache Airflow**: Description
+6.  **Docker**: Description
 
 ### Packages and API's
 
