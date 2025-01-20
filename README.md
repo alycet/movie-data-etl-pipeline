@@ -4,7 +4,7 @@
 In this project, we will build an ETL (Extract, Transform, Load) pipeline using Selenium, Beatiful Soup, OMDB API, AWS, and Snowflake.  The pipeline will retrienve data from the OMDB API, transform it into a desired format, and load it onto Snowflake data wharehouse
 
 ### Architecture
-![Architecture Diagram](Movie DB Dimensional Model.png)
+![Architecture Diagram](https://github.com/alycet/movie-data-etl-pipeline/blob/main/Movie%20DB%20Dimensional%20Model.png)
 
 ### About the Data/AP
 This API contains movie information from IMDB website including title, release_date, runtime, genre, plot, awards, actors, writers, directors, content_rating, box_office, imdb_rating, imdb_votes, and metascore.
