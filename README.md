@@ -46,7 +46,7 @@ pip install pandas
 
 3.  ***Load***
 
- In the load phase, cleaned data is merged into Snowflake for querying.
+ In the load phase, cleaned data is copies from S3 buckets and merged into Snowflake tables for querying.
 
  * Details
 
