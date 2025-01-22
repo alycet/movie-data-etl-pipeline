@@ -32,12 +32,13 @@ pip install pandas
 ### Project Execution Flow
 1. ***Extract***
    
-  * Both the extraction and transformation lambda functions are deployed using a docker image to package all dependencies and libraries.
-  * CloudWatch triggers the data extraction lambda function which is executed.
-  * Using selenium, beautiful soup, and requests, the top 1000 movie titles are extracted from IMDB website.
-  * The data is then loaded into an AWS S3 bucket that holds data in a to be processed folder. 
+     * Both the extraction and transformation lambda functions are deployed using a docker image to package all dependencies and libraries.
+     * CloudWatch triggers the data extraction lambda function which is executed.
+     * Using selenium, beautiful soup, and requests, the top 1000 movie titles are extracted from IMDB website.
+     * The titles are passed to the OMDB API to extract more information about each movie.
+     * The data is then loaded into an AWS S3 bucket that holds data in a to be processed folder. 
   
-  * The titles are passed to the OMDB API to extract more information about each movie.
+  
 
 2.  ***Transform***
 
