@@ -42,15 +42,17 @@ pip install pandas
 
 2.  ***Transform***
 
- In the transformation phase, a lambda function is triggered to clean data and transform to csv files.  These csv files are loaded to S3 buckets for processed and transformed data.
+     * Both the tranformation and load phases are deployed in Apache Airflow within an AWS EC2 instance.
+     * An S3 sensor operator detect when the raw data object is created onto the S3 bucket.
+     * The transformation lambda function is triggered to clean data and transform the raw data to csv files based on the data model.
+     * These csv files are loaded to S3 buckets that hold the processed and transformed data.
 
- * Details
 
 3.  ***Load***
-
- In the load phase, cleaned data is copies from S3 buckets and merged into Snowflake tables for querying.
-
- * Details
+   
+    * Dimestion and fact table are created in Snowflake.
+    * Cleaned data is copies from S3 buckets into Snowflake staging tables.
+    * Data from the staging tables are then merged into target tables to keep the most up to date movie information for querying.
 
 
 ### Data Model
