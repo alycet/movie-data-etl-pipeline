@@ -1,7 +1,7 @@
 # IMDB Movie End-To-End Data Engineering Project
 
 ### Introduction
-I love watching movies, so in this project, we will build an ETL (Extract, Transform, Load) pipeline using Selenium, Beatiful Soup, OMDB API, AWS, and Snowflake.  The pipeline will retrienve movie data for the top 1000 movies on IMDB from the OMDB API, transform it into a desired format, and load it onto Snowflake data wharehouse.
+I love watching movies, so in this project, we will build an ETL (Extract, Transform, Load) pipeline using Selenium, Beatiful Soup, OMDB API, AWS, and Snowflake.  The pipeline will retrienve movie data for the top 1000 movies on IMDB from the OMDB API, transform it into a desired format, and load it onto Snowflake data wharehouse where it can be queried whenver I need movie night ideas.
 
 ### System Architecture
 ![Architecture Diagram](https://github.com/alycet/movie-data-etl-pipeline/blob/main/IMDB%20Movie%20Pipeline%20Architecture%20-%20Page%201.png)
@@ -31,10 +31,11 @@ pip install pandas
 
 ### Project Execution Flow
 1. ***Extract***
-
- In the extract phase, a lambda function is triggered and executed to extract data and load into AWS S3 bucket that holds data to be processed. This lamdba funtion is deployed with a docker image to package all dependencies and libraries.
-
-  * Using selenium, beautiful soup, and requests, the top 1000 movie titles are extracted from IMDB website. 
+   
+  * Both the extraction and transformation lambda functions are deployed using a docker image to package all dependencies and libraries.
+  * CloudWatch triggers the data extraction lambda function which is executed.
+  * Using selenium, beautiful soup, and requests, the top 1000 movie titles are extracted from IMDB website.
+  * The data is then loaded into an AWS S3 bucket that holds data in a to be processed folder. 
   
   * The titles are passed to the OMDB API to extract more information about each movie.
 
