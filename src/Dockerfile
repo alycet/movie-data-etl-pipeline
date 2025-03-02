@@ -19,11 +19,11 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Copy utility funtions
-COPY utils.py .
+COPY lambda_function/utils.py .
 
 # Copy functions 
-COPY data_extract.py .
-COPY data_transformation.py .
+COPY lambda_functions/data_extract.py .
+COPY lambda_functions/data_transformation.py .
 
 # Command to run function
 #CMD ["data_extract.handler"]
