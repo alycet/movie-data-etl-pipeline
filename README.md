@@ -7,7 +7,7 @@
    - [Technologies Used]()
    - [Packages]()
    - [Data Execution Flow]()
-   - [Data Model]()
+   - [Data Model](https://github.com/alycet/movie-data-etl-pipeline/blob/main/README.md#data-model)
 
 ## Introduction
 The Movie Data ETL Pipeline is a project designed to combine the magic of movies with the power of data engineering. Leveraging technologies like Selenium, Beautiful Soup, OMDB API, AWS, and Snowflake, this project builds an end-to-end ETL (Extract, Transform, Load) pipeline for managing movie data.
