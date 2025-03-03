@@ -1,7 +1,7 @@
 # IMDB Movie End-To-End Data Engineering Project
 
 ## Introduction
-I love watching movies, so in this project, we will build an ETL (Extract, Transform, Load) pipeline using Selenium, Beatiful Soup, OMDB API, AWS, and Snowflake.  The pipeline will retrienve movie data for the top 1000 movies on IMDB from the OMDB API, transform it into a desired format, and load it onto Snowflake data wharehouse where it can be queried whenver I need movie night ideas.
+As a movie enthusiast, I wanted to combine my passion for films with data engineering. In this project, we will develop a dynamic ETL (Extract, Transform, Load) pipeline powered by Selenium, Beautiful Soup, OMDB API, AWS, and Snowflake. The pipeline will seamlessly retrieve movie data for the top 1000 IMDB films using the OMDB API, transform it into a structured format, and load it into a Snowflake data warehouse. This setup ensures that I can easily query the data whenever I’m searching for inspiration for my next movie night. Join me in building a data-driven approach to exploring cinematic masterpieces! 🎥🍿
 
 ## System Architecture
 ![Architecture Diagram](https://github.com/alycet/movie-data-etl-pipeline/blob/main/IMDB%20Movie%20Pipeline%20Architecture%20-%20Page%201.png)
