@@ -1,13 +1,13 @@
 # IMDB Movie End-To-End Data Engineering Project
 
 ## Table of Contents:
-   [Introduction]()
-   [System Architecture]()
-   [About the Data/API]()
-   [Technologies Used]()
-   [Packages]()
-   [Data Execution Flow]()
-   [Data Model]()
+   - [Introduction]()
+   - [System Architecture]()
+   - [About the Data/API]()
+   - [Technologies Used]()
+   - [Packages]()
+   - [Data Execution Flow]()
+   - [Data Model]()
 
 ## Introduction
 The Movie Data ETL Pipeline is a project designed to combine the magic of movies with the power of data engineering. Leveraging technologies like Selenium, Beautiful Soup, OMDB API, AWS, and Snowflake, this project builds an end-to-end ETL (Extract, Transform, Load) pipeline for managing movie data.
