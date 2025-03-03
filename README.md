@@ -1,7 +1,9 @@
 # IMDB Movie End-To-End Data Engineering Project
 
 ## Introduction
-As a movie enthusiast, I wanted to combine my passion for films with data engineering. In this project, we will develop a dynamic ETL (Extract, Transform, Load) pipeline powered by Selenium, Beautiful Soup, OMDB API, AWS, and Snowflake. The pipeline will seamlessly retrieve movie data for the top 1000 IMDB films using the OMDB API, transform it into a structured format, and load it into a Snowflake data warehouse. This setup ensures that I can easily query the data whenever I’m searching for inspiration for my next movie night. Join me in building a data-driven approach to exploring cinematic masterpieces! 🎥🍿
+The Movie Data ETL Pipeline is a project designed to combine the magic of movies with the power of data engineering. Leveraging technologies like Selenium, Beautiful Soup, OMDB API, AWS, and Snowflake, this project builds an end-to-end ETL (Extract, Transform, Load) pipeline for managing movie data.
+
+The pipeline retrieves comprehensive information about the top 1000 movies from IMDB using the OMDB API, including details like titles, genres, release dates, and ratings. This raw data is cleaned, transformed into a structured format, and ultimately loaded into a Snowflake data warehouse. With this setup, you can query the data to generate insightful recommendations or find inspiration for your next movie night. The project is a perfect blend of web scraping, API integration, and data warehouse management, making it an ideal practice ground for aspiring data engineers and movie enthusiasts alike.
 
 ## System Architecture
 ![Architecture Diagram](https://github.com/alycet/movie-data-etl-pipeline/blob/main/IMDB%20Movie%20Pipeline%20Architecture%20-%20Page%201.png)
@@ -39,7 +41,7 @@ pip install pandas
      * CloudWatch triggers the data extraction lambda function which is executed.
      * Using selenium, beautiful soup, and requests, the top 1000 movie titles are extracted from IMDB website.
      * The titles are passed to the OMDB API to extract more information about each movie.
-     * The data is then loaded into an AWS S3 bucket that holds data in a to be processed folder. 
+     * The data is then loaded into an AWS S3 bucket that raw holds data in a to be processed folder. 
   
   
 
