@@ -1,7 +1,7 @@
 # IMDB Movie End-To-End Data Engineering Project
 
 ## Table of Contents:
-   - [Introduction]()
+   - [Introduction](https://github.com/alycet/movie-data-etl-pipeline/blob/main/README.md#introduction)
    - [System Architecture]()
    - [About the Data/API]()
    - [Technologies Used]()
