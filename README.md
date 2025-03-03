@@ -1,5 +1,14 @@
 # IMDB Movie End-To-End Data Engineering Project
 
+## Table of Contents:
+   [Introduction]()
+   [System Architecture]()
+   [About the Data/API]()
+   [Technologies Used]()
+   [Packages]()
+   [Data Execution Flow]()
+   [Data Model]()
+
 ## Introduction
 The Movie Data ETL Pipeline is a project designed to combine the magic of movies with the power of data engineering. Leveraging technologies like Selenium, Beautiful Soup, OMDB API, AWS, and Snowflake, this project builds an end-to-end ETL (Extract, Transform, Load) pipeline for managing movie data.
 
@@ -13,7 +22,7 @@ The [OMDB API](https://www.omdbapi.com/) provides comprehensive movie informatio
 
 
 
-## Services Used
+## Technologies Used
 1.  **S3**: Amazon Simple Storage Service (Amazon S3) is a cloud storage service that allows users to store, retrieve, and manage data.
 2.  **AWS CloudWatch**: An AWS CloudWatch trigger is a feature that allows you to trigger actions in AWS services based on events or schedules. CloudWatch is a monitoring service that collects and tracks metrics, monitors log files, and sets alarms.
 3.  **AWS Lamdba**: Amazon Web Services (AWS) Lambda is a service that lets developers run code without managing servers. It's a serverless compute service that automatically scales and manages resources based on events.
