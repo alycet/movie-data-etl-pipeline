@@ -5,8 +5,11 @@ As a movie enthusiast, I wanted to combine my passion for films with data engine
 
 ## System Architecture
 ![Architecture Diagram](https://github.com/alycet/movie-data-etl-pipeline/blob/main/IMDB%20Movie%20Pipeline%20Architecture%20-%20Page%201.png)
-### About the Data/AP
-This [OMDB API](https://www.omdbapi.com/) contains movie information from IMDB website including title, release_date, runtime, genre, plot, awards, actors, writers, directors, content_rating, box_office, imdb_rating, imdb_votes, and metascore. 
+### About the Data/API
+The [OMDB API](https://www.omdbapi.com/) provides comprehensive movie information sourced from the IMDB website. This includes details such as the title, release date, runtime, genre, plot summary, awards, cast (actors, writers, directors), content rating, box office earnings, IMDb rating, number of IMDb votes, and metascore.
+
+
+
 
 ## Services Used
 1.  **S3**: Amazon Simple Storage Service (Amazon S3) is a cloud storage service that allows users to store, retrieve, and manage data.
