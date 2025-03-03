@@ -6,7 +6,7 @@
    - [About the Data/API]()
    - [Technologies Used]()
    - [Packages]()
-   - [Data Execution Flow]()
+   - [Project Execution Flow](https://github.com/alycet/movie-data-etl-pipeline/tree/main?tab=readme-ov-file#project-execution-flow)
    - [Data Model](https://github.com/alycet/movie-data-etl-pipeline/blob/main/README.md#data-model)
 
 ## Introduction
