@@ -27,37 +27,56 @@ The [OMDB API](https://www.omdbapi.com/) provides comprehensive movie informatio
 
 ```
 pip install bs4
+pip installl numpy
+pip install omdb
+pip install pandas
 pip install requests
 pip install selenium
-pip install omdb
-pip installl numpy
-pip install pandas
 ```
 
 ## Project Execution Flow
-1. ***Extract***
-   
-     * Both the extraction and transformation lambda functions are deployed using a docker image stored in an AWS ECR repository to package all dependencies and libraries.
-     * CloudWatch triggers the data extraction lambda function which is executed.
-     * Using selenium, beautiful soup, and requests, the top 1000 movie titles are extracted from IMDB website.
-     * The titles are passed to the OMDB API to extract more information about each movie.
-     * The data is then loaded into an AWS S3 bucket that raw holds data in a to be processed folder. 
-  
-  
+1. **Environment Setup**:
 
-2.  ***Transform***
+   - Clone the GitHub repository and install all required packages.
+   - Build the docker image to package all dependencies and libraries for the extraction and transformation functions.
+   - Store docker image in AWS ECR repository.
+   - Run docker compose up to install and launch Apache airflow for orchestration.
+   - Set up access credentials for the OMDB API, AWS, and Snowflake.
 
-     * Both the tranformation and load phases are deployed in Apache Airflow within an AWS EC2 instance.
-     * An S3 sensor operator detect when the raw data object is created onto the S3 bucket.
-     * The transformation lambda function is triggered to clean data and transform the raw data to csv files based on the data model.
-     * These csv files are loaded to S3 buckets that hold the processed and transformed data.
+2. **Data Extraction**:
 
+   - Set up cloud watch trigger to execute the data extraction lambda function.
+   -mUsing selenium, beautiful soup, and requests, the top 1000 movie titles are extracted from IMDB website.
+   - For each movie, the titles are passed to the OMDB API to extract more information about each movie, such as cast details, box office performance, and ratings.
+   - The data is then loaded into an AWS S3 bucket that raw holds data in a folder to be processed. 
 
-3.  ***Load***
-   
-    * Dimestion and fact table are created in Snowflake.
-    * Cleaned data is copies from S3 buckets into Snowflake staging tables.
-    * Data from the staging tables are then merged into target tables to keep the most up to date movie information for querying.
+3. **Data Transformation**:
+
+   - Both the transformation and load phases are written in the DAG and deployed in Apache Airflow within an AWS EC2 instance.
+   - An S3 sensor operator detects when the raw data object is created onto the S3 bucket.
+   - The transformation lambda function is triggered to clean data and transform the raw data to csv files based on the data model.
+   - These csv files are loaded to S3 buckets that hold the processed and transformed data.
+
+4. **Data Loading**:
+
+   - Create dimension and fact tables in the Snowflake data warehouse.
+   - Snowflake task is defined in DAG to load the cleaned data from the S3 bucket into Snowflake staging tables.
+   - Snowflake DAG is defined in DAG to merge data from staging tables into target tables, ensuring the most up-to-date movie information is available for querying.
+
+5. **Testing and Validation**:
+
+   - Perform validation checks to ensure the accuracy and completeness of the data.
+   - Query the Snowflake warehouse to confirm the pipeline's output.
+
+6. **Usage**:
+
+   - Use SQL queries to explore the movie data stored in Snowflake.
+   - Create visualizations or recommendations for movie nights based on genres, ratings, or other factors.
+
+7. **Monitoring and Optimization**:
+
+   - Implement logging and monitoring to track the pipeline's execution and performance.
+   - Optimize code and configurations to improve pipeline efficiency.
 
 
 ## Data Model
