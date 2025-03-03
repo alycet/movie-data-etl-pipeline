@@ -14,11 +14,15 @@ The Movie Data ETL Pipeline is a project designed to combine the magic of movies
 
 The pipeline retrieves comprehensive information about the top 1000 movies from IMDB using the OMDB API, including details like titles, genres, release dates, and ratings. This raw data is cleaned, transformed into a structured format, and ultimately loaded into a Snowflake data warehouse. With this setup, you can query the data to generate insightful recommendations or find inspiration for your next movie night. The project is a perfect blend of web scraping, API integration, and data warehouse management, making it an ideal practice ground for aspiring data engineers and movie enthusiasts alike.
 
+[Back to table of contents](https://github.com/alycet/movie-data-etl-pipeline/blob/main/README.md#table-of-contents)
+
 ## System Architecture
 ![Architecture Diagram](https://github.com/alycet/movie-data-etl-pipeline/blob/main/IMDB%20Movie%20Pipeline%20Architecture%20-%20Page%201.png)
+[Back to table of contents](https://github.com/alycet/movie-data-etl-pipeline/blob/main/README.md#table-of-contents)
 ### About the Data/API
 The [OMDB API](https://www.omdbapi.com/) provides comprehensive movie information sourced from the IMDB website. This includes details such as the title, release date, runtime, genre, plot summary, awards, cast (actors, writers, directors), content rating, box office earnings, IMDb rating, number of IMDb votes, and metascore.
 
+[Back to table of contents](https://github.com/alycet/movie-data-etl-pipeline/blob/main/README.md#table-of-contents)
 
 
 
@@ -32,6 +36,8 @@ The [OMDB API](https://www.omdbapi.com/) provides comprehensive movie informatio
 7.  **Apache Airflow**: Apache Airflow is an open-source platform for scheduling, monitoring, and creating data and computing workflows. It's written in Python and is used by data engineers to orchestrate pipelines.
 8.  **Docker**: Docker is a software platform that allows developers to create, test, and deploy applications quickly. It uses containers, which are standardized units that contain all the software required to run an application.
 
+[Back to table of contents](https://github.com/alycet/movie-data-etl-pipeline/blob/main/README.md#table-of-contents)
+
 ## Packages
 
 ```
@@ -42,6 +48,7 @@ pip install pandas
 pip install requests
 pip install selenium
 ```
+[Back to table of contents](https://github.com/alycet/movie-data-etl-pipeline/blob/main/README.md#table-of-contents)
 
 ## Project Execution Flow
 1. **Environment Setup**:
@@ -87,6 +94,8 @@ pip install selenium
    - Implement logging and monitoring to track the pipeline's execution and performance.
    - Optimize code and configurations to improve pipeline efficiency.
 
+[Back to table of contents](https://github.com/alycet/movie-data-etl-pipeline/blob/main/README.md#table-of-contents)
 
 ## Data Model
 ![Data Model](https://github.com/alycet/movie-data-etl-pipeline/blob/main/Movie%20DB%20Dimensional%20Model.png)
+[Back to table of contents](https://github.com/alycet/movie-data-etl-pipeline/blob/main/README.md#table-of-contents)
