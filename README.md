@@ -2,10 +2,10 @@
 
 ## Table of Contents:
    - [Introduction](https://github.com/alycet/movie-data-etl-pipeline/blob/main/README.md#introduction)
-   - [System Architecture]()
-   - [About the Data/API]()
-   - [Technologies Used]()
-   - [Packages]()
+   - [System Architecture](https://github.com/alycet/movie-data-etl-pipeline/blob/main/README.md#system-architecture)
+   - [About the Data/API](https://github.com/alycet/movie-data-etl-pipeline/blob/main/README.md#about-the-dataapi)
+   - [Technologies Used](https://github.com/alycet/movie-data-etl-pipeline/blob/main/README.md#technologies-used)
+   - [Packages](https://github.com/alycet/movie-data-etl-pipeline/blob/main/README.md#packages)
    - [Project Execution Flow](https://github.com/alycet/movie-data-etl-pipeline/tree/main?tab=readme-ov-file#project-execution-flow)
    - [Data Model](https://github.com/alycet/movie-data-etl-pipeline/blob/main/README.md#data-model)
 
