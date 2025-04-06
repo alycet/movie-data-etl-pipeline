@@ -77,7 +77,7 @@ pip install selenium
 
    - Create dimension and fact tables in the Snowflake data warehouse.
    - Snowflake task is defined in DAG to load the cleaned data from the S3 bucket into Snowflake staging tables.
-   - Snowflake DAG is defined in DAG to merge data from staging tables into target tables, ensuring the most up-to-date movie information is available for querying.
+   - Snowflake task is defined in DAG to merge data from staging tables into target tables, ensuring the most up-to-date movie information is available for querying.
 
 5. **Testing and Validation**:
 
