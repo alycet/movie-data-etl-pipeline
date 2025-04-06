@@ -62,7 +62,7 @@ pip install selenium
 2. **Data Extraction**:
 
    - Set up cloud watch trigger to execute the data extraction lambda function.
-   -mUsing selenium, beautiful soup, and requests, the top 1000 movie titles are extracted from IMDB website.
+   - Using selenium, beautiful soup, and requests, the top 1000 movie titles are extracted from IMDB website.
    - For each movie, the titles are passed to the OMDB API to extract more information about each movie, such as cast details, box office performance, and ratings.
    - The data is then loaded into an AWS S3 bucket that raw holds data in a folder to be processed. 
 
