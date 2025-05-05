@@ -169,7 +169,7 @@ def process_list_columns(df,column_name):
 def to_transformed_folder (data_name, dataframe):
     filename = 'transformed_data/' + data_name + '_data/' + data_name + '_transformed_' + str(datetime.now()) +'.csv'
     buffer = StringIO() #creating an empty buffer
-    dataframe.to_csv(buffer, sep = ';', index =False) #filling the empty buffer with song csv file
+    dataframe.to_csv(buffer, sep = ';', index =False) #filling the empty buffer with movie csv file
     contents = buffer.getvalue() #getting values in song buffer
     s3.put_object(Bucket = Bucket, Key = filename, Body = contents)
 
